@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "react-webpack-boilerplate",
   "main": "index.js",
-  "author": "kayne",
+  "author": ["kayne", "akayj"],
   "license": "MIT",
   "repository": {
     "url": "https://github.com/KayneWang/react-webpack-boilerplate"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --progress --config webpack.dev.js",
+    "build-dev": "cross-env NODE_ENV=development webpack --mode development --progress --config webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --mode production --progress --config webpack.prod.js",
     "http-server": "npm run build && npm run server",
     "server": "http-server dist -p 1234",
